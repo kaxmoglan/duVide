@@ -1,0 +1,73 @@
+---
+const frames: Array<{ default: string }> = [];
+
+for (let i = 1; i < 47; i++) {
+	const n = i < 10 ? `0${i}` : `${i}`;
+
+	const frame = await import(`./animation-frames/${n}.svg`);
+	frames.push(frame);
+}
+---
+
+<div class="animation__container">
+	{
+		frames.map((frame, idx) => (
+			<img
+				src={frame.default}
+				class={'animation__frame'}
+				id={`animation-frame-${idx + 1}`}
+			/>
+		))
+	}
+</div>
+
+<style lang="scss">
+	svg {
+		color: white;
+	}
+
+	.animation {
+		&__container {
+			width: 700px;
+			height: 700px;
+			position: relative;
+			display: flex;
+			align-items: center;
+		}
+
+		&__frame {
+			position: absolute;
+			width: 100%;
+			visibility: hidden;
+			animation-duration: 0.5s;
+			animation-name: showAndHide;
+			animation-iteration-count: 1;
+
+			@for $i from 1 through 47 {
+				&#animation-frame-#{$i} {
+					animation-delay: $i * 0.1s;
+				}
+			}
+
+			&#animation-frame-46 {
+				animation-name: show;
+				animation-iteration-count: infinite;
+			}
+		}
+	}
+
+	@keyframes showAndHide {
+		0% {
+			visibility: visible;
+		}
+		100% {
+			visibility: hidden;
+		}
+	}
+
+	@keyframes show {
+		0% {
+			visibility: visible;
+		}
+	}
+</style>
