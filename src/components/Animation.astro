@@ -39,13 +39,13 @@ for (let i = 1; i < 47; i++) {
 			position: absolute;
 			width: 100%;
 			visibility: hidden;
-			animation-duration: 0.5s;
 			animation-name: showAndHide;
 			animation-iteration-count: 1;
+			animation-duration: 0.05s; // NEED TO ALIGN
 
-			@for $i from 1 through 47 {
+			@for $i from 1 through 46 {
 				&#animation-frame-#{$i} {
-					animation-delay: $i * 0.1s;
+					animation-delay: $i * 0.05s; // NEED TO ALIGN
 				}
 			}
 
