@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 928.11 3208.29">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: CourierNewPS-ItalicMT, 'Courier New';
+        font-size: 44.93px;
+        font-style: italic;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1_copy" data-name="Layer 1 copy">
+    <g id="Poem_Haiku" data-name="Poem &amp;amp; Haiku">
+      <image id="Haiku" width="431" height="8192" transform="translate(851.6 836.7) scale(.18)" xlink:href="../../../../../../../Downloads/Site Mockup_Folder/Links/Haiku.png"/>
+      <text id="Poem" class="cls-1" transform="translate(12.31) rotate(90)"><tspan x="0" y="0">Music, the language of the soul, which words can never teach: a miracle of sound, that gives the unutterable to speech.</tspan></text>
+    </g>
+  </g>
+</svg>

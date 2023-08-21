@@ -4,11 +4,20 @@ import Animation from '../components/Animation.astro';
 ---
 
 <Layout title="DJ DuVide">
-	<h1>It's DuVide bitch</h1>
-
-	<Animation />
+	<main>
+		<div class="container">
+			<Animation />
+		</div>
+	</main>
 </Layout>
 
 <style lang="scss">
-	@import '../styles/main.scss';
+	.container {
+		height: 100vh;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
 </style>
