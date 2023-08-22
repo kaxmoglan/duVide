@@ -15,13 +15,14 @@ const socials = [
 	{
 		socials.map(({ name, href }) => (
 			<a href={href} class="social__link">
-				<Icon name={name} />
+				<Icon class="social__icon" name={name} />
 			</a>
 		))
 	}
 </div>
 
 <style lang="scss">
+	@import '../styles/main';
 	.social {
 		&__container {
 			display: flex;
@@ -37,7 +38,7 @@ const socials = [
 	}
 
 	svg {
-		height: 100%;
-		fill: white;
+		height: 30px;
+		fill: $white;
 	}
 </style>

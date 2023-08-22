@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Animation from '../components/Animation.astro';
 import Socials from '../components/Socials.astro';
+import Contact from '../components/Contact.astro';
+import Title from '../components/Title.astro';
 ---
 
 <Layout title="DJ DuVide">
@@ -10,6 +12,12 @@ import Socials from '../components/Socials.astro';
 			<Animation />
 			<div class="social-section">
 				<Socials />
+			</div>
+			<div class="contact-section">
+				<Contact />
+			</div>
+			<div class="title-section">
+				<Title />
 			</div>
 		</div>
 	</main>
@@ -27,7 +35,19 @@ import Socials from '../components/Socials.astro';
 		.social-section {
 			position: absolute;
 			bottom: 2rem;
-			right: 0;
+			right: 2rem;
+		}
+
+		.contact-section {
+			position: absolute;
+			bottom: 1rem;
+			left: 2rem;
+		}
+
+		.title-section {
+			position: absolute;
+			top: 5rem;
+			right: 2rem;
 		}
 	}
 </style>
