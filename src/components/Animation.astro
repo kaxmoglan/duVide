@@ -48,11 +48,11 @@ for (let i = 1; i < 47; i++) {
 			visibility: hidden;
 
 			animation-name: showAndHide;
-			animation-duration: 0.05s; // NEED TO ALIGN
+			animation-duration: 0.03s; // NEED TO ALIGN
 
 			@for $i from 1 through 46 {
 				&#animation-frame-#{$i} {
-					animation-delay: 1 + $i * 0.05s; // NEED TO ALIGN
+					animation-delay: 1 + $i * 0.03s; // NEED TO ALIGN
 				}
 			}
 
@@ -72,7 +72,7 @@ for (let i = 1; i < 47; i++) {
 
 	.fade-in {
 		animation-name: fadeIn50;
-		animation-duration: 5s;
+		animation-duration: 4s;
 		animation-timing-function: linear;
 	}
 </style>
