@@ -1,0 +1,43 @@
+---
+import { Icon } from 'astro-icon';
+
+const socials = [
+	{ name: 'WhatsApp', href: '' },
+	{ name: 'Instagram', href: '' },
+	{ name: 'YouTube', href: '' },
+	{ name: 'Spotify', href: '' },
+	{ name: 'Twitch', href: '' },
+	{ name: 'Discord', href: '' },
+];
+---
+
+<div class="social__container fade-in">
+	{
+		socials.map(({ name, href }) => (
+			<a href={href} class="social__link">
+				<Icon name={name} />
+			</a>
+		))
+	}
+</div>
+
+<style lang="scss">
+	.social {
+		&__container {
+			display: flex;
+			gap: 1rem;
+			height: 30px;
+		}
+
+		&__link {
+			&:hover {
+				transform: translateY(-0.35rem);
+			}
+		}
+	}
+
+	svg {
+		height: 100%;
+		fill: white;
+	}
+</style>

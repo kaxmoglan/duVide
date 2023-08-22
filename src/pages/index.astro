@@ -1,12 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Animation from '../components/Animation.astro';
+import Socials from '../components/Socials.astro';
 ---
 
 <Layout title="DJ DuVide">
 	<main>
 		<div class="container">
 			<Animation />
+			<div class="social-section">
+				<Socials />
+			</div>
 		</div>
 	</main>
 </Layout>
@@ -19,5 +23,11 @@ import Animation from '../components/Animation.astro';
 		align-items: center;
 		justify-content: center;
 		position: relative;
+
+		.social-section {
+			position: absolute;
+			bottom: 2rem;
+			right: 0;
+		}
 	}
 </style>
