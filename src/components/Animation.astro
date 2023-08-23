@@ -1,6 +1,7 @@
 ---
 import HaikuDesktop from '../components/haiku/haiku-desktop.svg';
 import ScrollingText from './ScrollingText.astro';
+import Title from './Title.astro';
 
 const frames: Array<{ default: string }> = [];
 
@@ -23,6 +24,9 @@ for (let i = 1; i < 47; i++) {
 		))
 	}
 	<img id="haiku-desktop" class="fade-in" src={HaikuDesktop} />
+	<div class="title-section">
+		<Title />
+	</div>
 	<!-- <div class="scrolling-text-container fade-in">
 		<ScrollingText />
 	</div> -->
@@ -30,6 +34,12 @@ for (let i = 1; i < 47; i++) {
 
 <style lang="scss">
 	@import '../styles/main';
+
+	.title-section {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
 
 	svg {
 		color: $white;

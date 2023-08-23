@@ -5,7 +5,12 @@ import TitleSVG from './logo/Title.svg';
 <img class="title fade-in" src={TitleSVG} />
 
 <style lang="scss">
+	@import '../styles/main';
 	.title {
 		height: 100px;
+
+		@include md-screen {
+			height: 80px;
+		}
 	}
 </style>
