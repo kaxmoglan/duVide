@@ -1,7 +1,15 @@
+---
+import {
+	DISPLAY_NUMBER,
+	PHONE_NUMBER,
+	EMAIL_ADDRESS,
+} from '../utils/constants';
+---
+
 <div class="container fade-in">
 	<p>enquiries and bookings:</p>
-	<a href="tel:+447879903071"><p>+447879 903 071</p></a>
-	<a href="mailto:dj.du.vide@icloud.com"><p>dj.du.vide@icloud.com</p></a>
+	<a href=`tel:${PHONE_NUMBER}`><p>{DISPLAY_NUMBER}</p></a>
+	<a href=`mailto:${EMAIL_ADDRESS}`><p>{EMAIL_ADDRESS}</p></a>
 </div>
 
 <style lang="scss">
