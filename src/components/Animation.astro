@@ -1,8 +1,4 @@
 ---
-import HaikuDesktop from '../components/haiku/haiku-desktop.svg';
-import ScrollingText from './ScrollingText.astro';
-import Title from './Title.astro';
-
 const frames: Array<{ default: string }> = [];
 
 for (let i = 1; i < 47; i++) {
@@ -13,73 +9,34 @@ for (let i = 1; i < 47; i++) {
 }
 ---
 
-<div class="animation__container">
-	{
-		frames.map((frame, idx) => (
-			<img
-				src={frame.default}
-				class={'animation__frame'}
-				id={`animation-frame-${idx + 1}`}
-			/>
-		))
-	}
-	<img id="haiku-desktop" class="fade-in" src={HaikuDesktop} />
-	<div class="title-section">
-		<Title />
-	</div>
-	<!-- <div class="scrolling-text-container fade-in">
-		<ScrollingText />
-	</div> -->
-</div>
+{
+	frames.map((frame, idx) => (
+		<img
+			src={frame.default}
+			class={'animation-frame'}
+			id={`animation-frame-${idx + 1}`}
+		/>
+	))
+}
 
 <style lang="scss">
-	@import '../styles/main';
-
-	.title-section {
+	.animation-frame {
 		position: absolute;
-		top: 0;
-		right: 0;
-	}
+		width: 100%;
+		visibility: hidden;
 
-	svg {
-		color: $white;
-	}
+		animation-name: showAndHide;
+		animation-duration: 0.03s; // NEED TO ALIGN
 
-	.animation {
-		&__container {
-			width: 80%;
-			height: 80%;
-			position: relative;
-			display: flex;
-			align-items: center;
-			margin-bottom: 2rem;
-		}
-
-		&__frame {
-			position: absolute;
-			width: 100%;
-			visibility: hidden;
-
-			animation-name: showAndHide;
-			animation-duration: 0.03s; // NEED TO ALIGN
-
-			@for $i from 1 through 46 {
-				&#animation-frame-#{$i} {
-					animation-delay: 1 + $i * 0.03s; // NEED TO ALIGN
-				}
-			}
-
-			&#animation-frame-46 {
-				animation-name: show;
-				animation-iteration-count: infinite;
+		@for $i from 1 through 46 {
+			&#animation-frame-#{$i} {
+				animation-delay: 1 + $i * 0.03s; // NEED TO ALIGN
 			}
 		}
-	}
 
-	#haiku-desktop {
-		width: 25%;
-		position: absolute;
-		bottom: 50%;
-		left: -3rem;
+		&#animation-frame-46 {
+			animation-name: show;
+			animation-iteration-count: infinite;
+		}
 	}
 </style>

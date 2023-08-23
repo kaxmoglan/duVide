@@ -4,12 +4,19 @@ import Animation from '../components/Animation.astro';
 import Socials from '../components/Socials.astro';
 import Contact from '../components/Contact.astro';
 import Title from '../components/Title.astro';
+import HaikuDesktop from '../components/haiku/haiku-desktop.svg';
 ---
 
 <Layout title="DJ DuVide">
 	<main>
 		<div class="container">
-			<Animation />
+			<div class="main-section">
+				<div class="title-section">
+					<Title />
+				</div>
+				<Animation />
+				<img id="haiku-desktop" class="fade-in" src={HaikuDesktop} />
+			</div>
 			<div class="social-section">
 				<Socials />
 			</div>
@@ -28,6 +35,28 @@ import Title from '../components/Title.astro';
 		align-items: center;
 		justify-content: center;
 		position: relative;
+
+		.main-section {
+			width: 80%;
+			height: 80%;
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin-bottom: 2rem;
+
+			.title-section {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+
+			#haiku-desktop {
+				width: 25%;
+				position: absolute;
+				bottom: 50%;
+				left: -3rem;
+			}
+		}
 
 		.social-section {
 			position: absolute;
