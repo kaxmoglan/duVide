@@ -5,6 +5,8 @@ import Socials from '../components/Socials.astro';
 import Contact from '../components/Contact.astro';
 import Title from '../components/Title.astro';
 import HaikuDesktop from '../components/haiku/haiku-desktop.svg';
+import Button from '../components/Button.astro';
+import { YOU_TUBE } from '../utils/constants';
 ---
 
 <Layout title="DJ Du Vide">
@@ -22,6 +24,9 @@ import HaikuDesktop from '../components/haiku/haiku-desktop.svg';
 			</div>
 			<div class="contact-section">
 				<Contact />
+			</div>
+			<div class="button-container fade-in">
+				<Button text="Watch Now" href={YOU_TUBE} />
 			</div>
 		</div>
 	</main>
@@ -68,6 +73,12 @@ import HaikuDesktop from '../components/haiku/haiku-desktop.svg';
 			position: absolute;
 			bottom: 1rem;
 			left: 2rem;
+		}
+
+		.button-container {
+			position: absolute;
+			bottom: 3.5rem;
+			left: calc(50% - 75px);
 		}
 	}
 </style>
