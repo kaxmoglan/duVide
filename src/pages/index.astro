@@ -16,7 +16,9 @@ import { YOU_TUBE } from '../utils/constants';
 				<div class="title-section fade-in">
 					<Title />
 				</div>
-				<Animation />
+				<div class="animation-section">
+					<Animation />
+				</div>
 				<img id="haiku-desktop" class="fade-in" src={HaikuDesktop} />
 			</div>
 			<div class="social-section fade-in">
@@ -33,6 +35,7 @@ import { YOU_TUBE } from '../utils/constants';
 </Layout>
 
 <style lang="scss">
+	@import '../styles/main';
 	.container {
 		height: 100vh;
 
@@ -40,6 +43,12 @@ import { YOU_TUBE } from '../utils/constants';
 		align-items: center;
 		justify-content: center;
 		position: relative;
+
+		@include md-screen {
+			flex-direction: column;
+			justify-content: space-around;
+			padding: 3% 0;
+		}
 
 		.main-section {
 			width: 80%;
@@ -49,10 +58,44 @@ import { YOU_TUBE } from '../utils/constants';
 			align-items: center;
 			margin-bottom: 2rem;
 
+			@include md-screen {
+				flex-direction: column;
+				width: 100%;
+				height: 45%;
+				margin-bottom: 0;
+			}
+
+			.animation-section {
+				width: 100%;
+				height: 100%;
+				position: relative;
+
+				@include md-screen {
+					top: -8%;
+				}
+
+				@include sm-screen {
+					top: -15%;
+				}
+
+				@include xs-screen {
+					top: -6%;
+					height: 60%;
+				}
+
+				@include xxs-screen {
+					top: -5%;
+				}
+			}
+
 			.title-section {
 				position: absolute;
 				top: 0;
 				right: 0;
+
+				@include md-screen {
+					position: initial;
+				}
 			}
 
 			#haiku-desktop {
@@ -60,6 +103,10 @@ import { YOU_TUBE } from '../utils/constants';
 				position: absolute;
 				bottom: 50%;
 				left: -3rem;
+
+				@include md-screen {
+					display: none;
+				}
 			}
 		}
 
@@ -67,18 +114,35 @@ import { YOU_TUBE } from '../utils/constants';
 			position: absolute;
 			bottom: 2rem;
 			right: 2rem;
+			order: 3;
+
+			@include md-screen {
+				position: initial;
+				justify-self: flex-end;
+			}
 		}
 
 		.contact-section {
+			order: 2;
 			position: absolute;
 			bottom: 1rem;
 			left: 2rem;
+
+			@include md-screen {
+				position: initial;
+				text-align: center;
+			}
 		}
 
 		.button-container {
 			position: absolute;
 			bottom: 3.5rem;
 			left: calc(50% - 75px);
+			order: 1;
+
+			@include md-screen {
+				position: initial;
+			}
 		}
 	}
 </style>
