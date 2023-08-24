@@ -11,27 +11,16 @@ const socials = [
 	{ name: 'Instagram', href: 'http://instagram.com/djduvide' },
 	{ name: 'WhatsApp', href: 'https://wa.link/wnxrz3' },
 	{ name: 'Mail', href: `mailto:${EMAIL_ADDRESS}` },
-	{ name: 'YouTube', href: '' },
+	{
+		name: 'YouTube',
+		href: 'https://www.youtube.com/channel/UCziAUIicwDc3EnhxdyNESKQ',
+	},
 	{
 		name: 'Spotify',
 		href: 'https://open.spotify.com/user/moleador?si=bb401d06f0f84e28',
 	},
 ];
 ---
-
-<script>
-	const socialLinks = document.querySelectorAll('.social__link');
-
-	socialLinks.forEach((link) => {
-		if (link.getAttribute('href')) return;
-
-		link.removeAttribute('target');
-		link.addEventListener('click', (e) => {
-			e.preventDefault();
-			alert('Shit');
-		});
-	});
-</script>
 
 <div class="social__container fade-in">
 	{
