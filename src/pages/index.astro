@@ -7,7 +7,6 @@ import Title from '../components/Title.astro';
 import HaikuDesktop from '../components/haiku/haiku-desktop.svg';
 import Button from '../components/Button.astro';
 import { YOU_TUBE } from '../utils/constants';
-import ScrollingText from '../components/ScrollingText.astro';
 ---
 
 <Layout title="DJ Du Vide">
@@ -27,9 +26,6 @@ import ScrollingText from '../components/ScrollingText.astro';
 			</div>
 			<div class="contact-section fade-in">
 				<Contact />
-			</div>
-			<div class="scrolling-text-section fade-in">
-				<ScrollingText />
 			</div>
 			<div class="button-container fade-in">
 				<Button text="Watch Now" href={YOU_TUBE} />
@@ -137,20 +133,6 @@ import ScrollingText from '../components/ScrollingText.astro';
 			@include md-screen {
 				position: initial;
 				text-align: center;
-			}
-		}
-
-		.scrolling-text-section {
-			display: none;
-
-			width: 100vh;
-			transform: rotate(90deg);
-			position: relative;
-			left: -45vw;
-			top: -3rem;
-
-			@include md-screen {
-				display: initial;
 			}
 		}
 
