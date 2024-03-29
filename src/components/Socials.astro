@@ -1,15 +1,22 @@
 ---
 import { Icon } from 'astro-icon';
-import { EMAIL_ADDRESS, YOU_TUBE } from '../utils/constants';
+import {
+	EMAIL_ADDRESS,
+	YOU_TUBE,
+	MIX_CLOUD,
+	INSTAGRAM,
+	WHATSAPP,
+	SPOTIFY,
+} from '../utils/constants';
 
 const socials = [
 	{
 		name: 'Mixcloud',
-		href: `https://www.mixcloud.com/djduvide/`,
+		href: MIX_CLOUD,
 		id: 'mixcloud-icon',
 	},
-	{ name: 'Instagram', href: 'http://instagram.com/djduvide' },
-	{ name: 'WhatsApp', href: 'https://wa.link/wnxrz3' },
+	{ name: 'Instagram', href: INSTAGRAM },
+	{ name: 'WhatsApp', href: WHATSAPP },
 	{ name: 'Mail', href: `mailto:${EMAIL_ADDRESS}` },
 	{
 		name: 'YouTube',
@@ -17,7 +24,7 @@ const socials = [
 	},
 	{
 		name: 'Spotify',
-		href: 'https://open.spotify.com/user/moleador?si=bb401d06f0f84e28',
+		href: SPOTIFY,
 	},
 ];
 ---
